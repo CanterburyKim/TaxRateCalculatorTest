@@ -1,6 +1,6 @@
 import unittest
 import os
-from taxes import build_tax_dictionary, calculate_tax
+from taxes_REF import build_tax_dictionary, calculate_tax
 
 
 # The preparation of constants to use in the test case
@@ -10,15 +10,16 @@ TAX_RATE_FILENAME = 'income_tax_rates_2018.csv'
 
 TAX_RATE_DICT = build_tax_dictionary(MY_DIR + '/' + TAX_RATE_FILENAME)
 
+print(TAX_RATE_DICT)
 
 # dictionary to hold gross and expected result
 GROSS_TAX_DICT = {
-    75_000: 9_997,
-    50_000: 4_497,
-    120_000: 20_657,
-    82_000: 11_537,
-    250_000: 59_237,
-    550_000: 165_567
+    75_000: 9889,
+    50_000: 4389,
+    120_000: 20549,
+    82_000: 11429,
+    250_000: 59129,
+    550_000: 165649
 }
 
 MY_STANDARD_DEDUCTION = 12_000
